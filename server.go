@@ -50,11 +50,11 @@ func createApp(postgresConnString string, mongoConnString string) *Application {
 		//Methods(http.MethodPost)
 
 	server := http.Server{
-		Addr:    fmt.Sprintf(":%d", "8080"),
+		Addr:    fmt.Sprintf(":%d", 8080),
 		Handler: router,
 	}
 
-	log.Printf("HTTP server started on %d\n", "8080")
+	log.Printf("HTTP server started on %d\n", 8080)
 	return &Application{
 		//pgDb:       pgDb,
 		server:          &server,

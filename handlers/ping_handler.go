@@ -10,7 +10,7 @@ import (
 
 func PingHandler(logger *logging.Repository) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if _, err := io.WriteString(w, "I'm sms-service"); err != nil {
+		if _, err := io.WriteString(w, "I'm test-server-golang microservice!"); err != nil {
 			log.Printf("error to write response: %s", err)
 		}
 
